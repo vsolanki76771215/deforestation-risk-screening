@@ -1,0 +1,63 @@
+{
+  "task": "3.4-acquire-and-build-sentinel2-composites",
+  "completed_at_utc": "2026-08-14T03:53:10.415179Z",
+  "status": "passed",
+  "selected_scene_count": 2,
+  "expected_aoi_year_count": 2,
+  "expected_acquired_asset_count": 10,
+  "acquired_asset_count": 10,
+  "composite_count": 2,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B08"
+  ],
+  "excluded_scl_classes": [
+    0,
+    1,
+    3,
+    8,
+    9,
+    10,
+    11
+  ],
+  "results": [
+    {
+      "aoi_id": "huepetuhe_inference_area",
+      "aoi_role": "inference_only",
+      "target_year": 2018,
+      "scene_count": 1,
+      "item_ids": "S2A_MSIL2A_20180828T145721_R039_T19LCF_20201027T054517",
+      "composite_path": "data\\processed\\sentinel2_composites\\huepetuhe_inference_area\\sentinel2_2018_composite.tif",
+      "valid_mask_path": "data\\processed\\sentinel2_composites\\huepetuhe_inference_area\\sentinel2_2018_valid_mask.tif",
+      "width": 1528,
+      "height": 1338,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "valid_pixel_count": 1996362,
+      "aoi_pixel_count": 2016824,
+      "valid_coverage_pct": 98.9854,
+      "sha256": "a478fac34ca6572cb2b910cda6fedc1c6e45843c99e08c6dc08a480c17324d34",
+      "status": "passed"
+    },
+    {
+      "aoi_id": "huepetuhe_inference_area",
+      "aoi_role": "inference_only",
+      "target_year": 2022,
+      "scene_count": 1,
+      "item_ids": "S2B_MSIL2A_20220822T145729_R039_T19LCF_20240704T091633",
+      "composite_path": "data\\processed\\sentinel2_composites\\huepetuhe_inference_area\\sentinel2_2022_composite.tif",
+      "valid_mask_path": "data\\processed\\sentinel2_composites\\huepetuhe_inference_area\\sentinel2_2022_valid_mask.tif",
+      "width": 1528,
+      "height": 1338,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "valid_pixel_count": 2016824,
+      "aoi_pixel_count": 2016824,
+      "valid_coverage_pct": 100.0,
+      "sha256": "c5249653114379b5d73410cbf631cf73e18ed2330b7fec2a6152318cf97f1794",
+      "status": "passed"
+    }
+  ]
+}

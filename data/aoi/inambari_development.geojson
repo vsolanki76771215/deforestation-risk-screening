@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "inambari_development",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "inambari_development"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.18,
+              -13.3
+            ],
+            [
+              -70.04,
+              -13.3
+            ],
+            [
+              -70.04,
+              -13.18
+            ],
+            [
+              -70.18,
+              -13.18
+            ],
+            [
+              -70.18,
+              -13.3
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

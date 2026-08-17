@@ -1,0 +1,42 @@
+task: "3.9"
+random_seed: 42
+
+inputs:
+  patch_manifest: data/manifests/patches.csv
+
+outputs:
+  dataset_manifest: data/manifests/modeling_dataset.csv
+  split_summary: data/manifests/modeling_split_summary.json
+  validation_summary: data/manifests/modeling_dataset_validation_summary.json
+
+columns:
+  patch_id: patch_id
+  feature_patch_path: feature_patch_path
+  label_patch_path: label_patch_path
+  aoi_id: aoi_id
+  aoi_role: aoi_role
+  row: row_off
+  col: col_off
+  patch_size: patch_size
+  loss_fraction: loss_fraction
+
+label:
+  output_column: loss_binary
+  source_column: loss_fraction
+  positive_when_greater_than: 0.0
+
+split:
+  held_out_test_role: held_out_test
+  held_out_test_aois:
+    - tambopata_test_area
+  validation_fraction: 0.20
+  spatial_block_size_pixels: 512
+  patch_size_pixels: 32  # checked against the manifest patch_size column
+  drop_block_boundary_patches: true
+
+validation:
+  allowed_splits: [train, validation, test]
+  require_all_splits: true
+  require_existing_patch_files: true
+  require_both_classes_in_each_split: true
+  check_npz_readable: true

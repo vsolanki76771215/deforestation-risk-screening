@@ -1,0 +1,75 @@
+task: "3.14"
+random_seed: 42
+
+inputs:
+  patch_manifest: data/manifests/patches_task_3_14.csv
+  geospatial_config: config/geospatial_task_3_14.yaml
+  sentinel2_composite_manifest: data/manifests/sentinel2_composites_task_3_14.csv
+  label_manifest: data/manifests/label_rasters_task_3_14.csv
+
+outputs:
+  aoi_inventory: data/manifests/expanded_aoi_inventory.csv
+  label_audit: data/manifests/task_3_14_label_audit.csv
+  dataset_manifest: data/manifests/modeling_dataset_v2.csv
+  fold_manifest: data/manifests/geographic_cv_folds.csv
+  split_summary: data/manifests/modeling_split_summary_v2.json
+  validation_summary: data/manifests/task_3_14_validation_summary.json
+
+columns:
+  patch_id: patch_id
+  feature_patch_path: feature_patch_path
+  label_patch_path: label_patch_path
+  aoi_id: aoi_id
+  aoi_role: aoi_role
+  row: row_off
+  col: col_off
+  patch_size: patch_size
+  loss_fraction: loss_fraction
+
+label:
+  output_column: loss_binary
+  source_column: loss_fraction
+  positive_when_greater_than: 0.0
+
+roles:
+  development: dataset_development
+  diagnostic: geographic_holdout
+  final: final_geographic_holdout
+  diagnostic_aois:
+    - tambopata_test_area
+  final_aois:
+    - iberia_final_holdout
+
+split:
+  held_out_test_role: geographic_holdout
+  held_out_test_aois:
+    - tambopata_test_area
+  final_holdout_role: final_geographic_holdout
+  final_holdout_aois:
+    - iberia_final_holdout
+  validation_fraction: 0.20
+  spatial_block_size_pixels: 512
+  patch_size_pixels: 32
+  drop_block_boundary_patches: true
+  fold_method: leave_one_aoi_out
+  balance_training_by_aoi: true
+  max_training_patches_per_aoi: null
+
+validation:
+  minimum_development_aois: 5
+  minimum_new_development_aois: 3
+  original_development_aois:
+    - la_pampa
+    - mining_training_area
+  allowed_splits:
+    - train
+    - validation
+    - test
+    - final_holdout
+  require_all_splits: true
+  require_both_classes_in_each_split: true
+  require_existing_patch_files: true
+  check_npz_readable: true
+  require_both_classes_per_evaluation_aoi: true
+  minimum_valid_coverage_pct: 80.0
+  require_eligible_label_coverage_pct: 100.0

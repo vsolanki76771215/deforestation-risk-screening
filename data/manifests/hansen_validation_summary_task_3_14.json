@@ -1,0 +1,175 @@
+{
+  "task": "3.5",
+  "hansen_version": "GFC-2025-v1.13",
+  "status": "PASSED",
+  "minimum_valid_coverage_pct": 95.0,
+  "forest_threshold_treecover2000_pct": 30,
+  "positive_loss_years": [
+    2019,
+    2022
+  ],
+  "aois": {
+    "la_pampa": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 480,
+      "height": 400,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 2526,
+        "2020": 452,
+        "2021": 202,
+        "2022": 415
+      },
+      "preliminary_positive_label_pixels": 3541
+    },
+    "mining_training_area": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 600,
+      "height": 480,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 5882,
+        "2020": 9227,
+        "2021": 7636,
+        "2022": 7818
+      },
+      "preliminary_positive_label_pixels": 30281
+    },
+    "laberinto_development": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 560,
+      "height": 480,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 207,
+        "2020": 318,
+        "2021": 312,
+        "2022": 448
+      },
+      "preliminary_positive_label_pixels": 1270
+    },
+    "las_piedras_development": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 560,
+      "height": 480,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 825,
+        "2020": 1490,
+        "2021": 1066,
+        "2022": 894
+      },
+      "preliminary_positive_label_pixels": 4150
+    },
+    "inambari_development": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 560,
+      "height": 480,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 17,
+        "2020": 0,
+        "2021": 9,
+        "2022": 9
+      },
+      "preliminary_positive_label_pixels": 35
+    },
+    "tambopata_test_area": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 480,
+      "height": 400,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 272,
+        "2020": 418,
+        "2021": 567,
+        "2022": 272
+      },
+      "preliminary_positive_label_pixels": 1388
+    },
+    "iberia_final_holdout": {
+      "grid_aligned": true,
+      "crs": "EPSG:4326",
+      "width": 560,
+      "height": 480,
+      "treecover2000_range": [
+        0,
+        100
+      ],
+      "lossyear_range": [
+        0,
+        25
+      ],
+      "treecover2000_coverage_pct": 100.0,
+      "lossyear_coverage_pct": 100.0,
+      "annual_loss_pixels": {
+        "2019": 11054,
+        "2020": 5029,
+        "2021": 4235,
+        "2022": 4937
+      },
+      "preliminary_positive_label_pixels": 25186
+    }
+  },
+  "errors": []
+}

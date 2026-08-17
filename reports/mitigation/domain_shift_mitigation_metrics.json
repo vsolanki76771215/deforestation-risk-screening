@@ -1,0 +1,149 @@
+{
+  "task": "3.13",
+  "status": "COMPLETED",
+  "created_at_utc": "2026-08-09T06:00:37.353279+00:00",
+  "protocol": {
+    "fit_split": "train",
+    "selection_split": "validation",
+    "ablation_drift_split": "validation",
+    "test_used_for_selection": false,
+    "test_evaluations_after_selection": 1
+  },
+  "selected_candidate": {
+    "candidate_id": 1,
+    "model": "ExtraTreesClassifier",
+    "feature_set": "all",
+    "calibration": "none",
+    "feature_count": 99,
+    "threshold": 0.47500000000000003,
+    "validation_roc_auc": 0.8460968026689859,
+    "validation_pr_auc": 0.7747679569348082,
+    "validation_precision": 0.6255656108597285,
+    "validation_recall": 0.7353723404255319,
+    "validation_f1": 0.676039119804401,
+    "validation_false_positive_rate": 0.10097620500305064,
+    "constraints_met": false,
+    "worst_aoi_pr_auc": 0.29377031700904843,
+    "parameters_json": "{\"calibration\": \"none\", \"class_weight\": \"balanced\", \"feature_set\": \"all\", \"max_depth\": null, \"max_features\": \"sqrt\", \"min_samples_leaf\": 4, \"model\": \"ExtraTreesClassifier\", \"n_estimators\": 600}"
+  },
+  "metrics_by_split": {
+    "train": {
+      "row_count": 16832,
+      "positive_count": 6236,
+      "positive_rate": 0.37048479087452474,
+      "threshold": 0.47500000000000003,
+      "roc_auc": 0.9997436008262888,
+      "pr_auc": 0.999552053891124,
+      "precision": 0.9837025316455696,
+      "recall": 0.9969531751122515,
+      "f1": 0.9902835297865562,
+      "false_positive_rate": 0.009720649301623254,
+      "confusion_matrix": {
+        "tn": 10493,
+        "fp": 103,
+        "fn": 19,
+        "tp": 6217
+      }
+    },
+    "validation": {
+      "row_count": 4030,
+      "positive_count": 752,
+      "positive_rate": 0.18660049627791564,
+      "threshold": 0.47500000000000003,
+      "roc_auc": 0.8460968026689859,
+      "pr_auc": 0.7747679569348082,
+      "precision": 0.6255656108597285,
+      "recall": 0.7353723404255319,
+      "f1": 0.676039119804401,
+      "false_positive_rate": 0.10097620500305064,
+      "confusion_matrix": {
+        "tn": 2947,
+        "fp": 331,
+        "fn": 199,
+        "tp": 553
+      }
+    },
+    "test": {
+      "row_count": 15874,
+      "positive_count": 417,
+      "positive_rate": 0.026269371298979462,
+      "threshold": 0.47500000000000003,
+      "roc_auc": 0.7462031668577281,
+      "pr_auc": 0.24889104123972058,
+      "precision": 0.057986635050657466,
+      "recall": 0.645083932853717,
+      "f1": 0.10640822784810126,
+      "false_positive_rate": 0.28271980332535424,
+      "confusion_matrix": {
+        "tn": 11087,
+        "fp": 4370,
+        "fn": 148,
+        "tp": 269
+      }
+    }
+  },
+  "task_3_11_comparison_delta": {
+    "validation": {
+      "roc_auc": -0.01330192904339711,
+      "pr_auc": -0.017980984148809998,
+      "precision": -0.06476486649645263,
+      "recall": -0.0146276595744681,
+      "f1": -0.04289013449770229
+    },
+    "test": {
+      "roc_auc": 0.02080297332942982,
+      "pr_auc": 0.0628114802259469,
+      "precision": -0.028936441872419456,
+      "recall": 0.10311750599520386,
+      "f1": -0.04340947185358916
+    }
+  },
+  "quality_gates": {
+    "test_roc_auc": {
+      "value": 0.7462031668577281,
+      "limit": 0.9,
+      "operator": ">=",
+      "passed": false
+    },
+    "test_pr_auc": {
+      "value": 0.24889104123972058,
+      "limit": 0.65,
+      "operator": ">=",
+      "passed": false
+    },
+    "test_recall": {
+      "value": 0.645083932853717,
+      "limit": 0.75,
+      "operator": ">=",
+      "passed": false
+    },
+    "test_false_positive_rate": {
+      "value": 0.28271980332535424,
+      "limit": 0.1,
+      "operator": "<=",
+      "passed": false
+    }
+  },
+  "quality_gate_status": "FAILED",
+  "artifacts": {
+    "model_artifact": "models/domain_shift_mitigated_model.joblib",
+    "metrics": "reports/mitigation/domain_shift_mitigation_metrics.json",
+    "predictions": "reports/mitigation/domain_shift_mitigation_predictions.csv",
+    "experiment_results": "reports/mitigation/mitigation_experiments.csv",
+    "ablated_features": "reports/mitigation/ablated_features.csv",
+    "validation_aoi_metrics": "reports/mitigation/validation_aoi_metrics.csv",
+    "feature_importance": "reports/mitigation/feature_importance.csv"
+  },
+  "input_sha256": {
+    "manifest": "5f917dd5512ced5ac2b069651916b761122fecf081e0ea05d6c85297e497a88f",
+    "feature_shift": "e92c6fc61c766941d8d3f4e6f0c8d6152a0e3c0e2515fc538b3480956602099e",
+    "improved_metrics": "0b257686be8a00e8e11c7735be4dfd58b06b54d82f021bd98a5b6866f5dadb07"
+  },
+  "runtime": {
+    "python": "3.9.1",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.5.3"
+  }
+}

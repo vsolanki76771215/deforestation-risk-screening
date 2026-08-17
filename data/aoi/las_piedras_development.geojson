@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "las_piedras_development",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "las_piedras_development"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.31,
+              -12.08
+            ],
+            [
+              -69.17,
+              -12.08
+            ],
+            [
+              -69.17,
+              -11.96
+            ],
+            [
+              -69.31,
+              -11.96
+            ],
+            [
+              -69.31,
+              -12.08
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

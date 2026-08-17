@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "iberia_final_holdout",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "iberia_final_holdout"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.65,
+              -11.5
+            ],
+            [
+              -69.51,
+              -11.5
+            ],
+            [
+              -69.51,
+              -11.38
+            ],
+            [
+              -69.65,
+              -11.38
+            ],
+            [
+              -69.65,
+              -11.5
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

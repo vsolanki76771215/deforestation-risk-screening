@@ -1,0 +1,60 @@
+# Python environments, caches, and test output
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Local editor settings and scratch files
+.vscode/
+logs/
+local_model/
+patch_probe.txt
+project_structure.txt
+
+# Raw and generated geospatial data
+data/raw/
+data/processed/
+*.npz
+*.tif
+*.tiff
+
+# Large SageMaker artifacts and temporary batch files
+artifacts/
+*.tar.gz
+*.jsonl
+
+# Model binaries: distribute the approved final model as a GitHub Release asset or S3 object
+*.joblib
+
+# Bulk patch-level prediction outputs
+reports/**/predictions.csv
+reports/**/rejected_patches.csv
+reports/**/*_predictions.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large derived manifests and full interactive-map output
+data/manifests/inference_patches_*.csv
+data/manifests/patches_task_3_14.csv
+data/manifests/*.before_role_fix.csv
+reports/inference/*/prediction_map.geojson
+
+# Keep only curated manifests and the repository demo
+data/manifests/*
+!data/manifests/*task_3_14*
+!data/manifests/*huepetuhe*
+!data/manifests/expanded_aoi_inventory.csv
+data/manifests/inference_patches_*.csv
+data/manifests/patches_task_3_14.csv
+data/manifests/*.before_role_fix.csv
+
+# Full SageMaker output remains local/cloud-only
+reports/inference/huepetuhe_sagemaker_2018_2022/
+
+# Allow the small committed dashboard demo
+!reports/demo/
+!reports/demo/huepetuhe_sample/
+!reports/demo/huepetuhe_sample/predictions.csv
+!reports/demo/huepetuhe_sample/rejected_patches.csv

@@ -1,0 +1,162 @@
+{
+  "task": "3.10",
+  "status": "COMPLETED",
+  "model_type": "RandomForestClassifier",
+  "created_at_utc": "2026-08-09T00:29:39.735885+00:00",
+  "manifest": "data/manifests/modeling_dataset.csv",
+  "manifest_sha256": "5f917dd5512ced5ac2b069651916b761122fecf081e0ea05d6c85297e497a88f",
+  "config_sha256": "6b291386f78518859d9a0cfd2b0d0ed91cd630ad91623ebeac1902247ebe1e72",
+  "random_seed": 42,
+  "feature_count": 55,
+  "features": [
+    "ndvi_diff__mean",
+    "ndvi_diff__std",
+    "ndvi_diff__min",
+    "ndvi_diff__max",
+    "ndvi_diff__median",
+    "ndvi_2018__mean",
+    "ndvi_2018__std",
+    "ndvi_2018__min",
+    "ndvi_2018__max",
+    "ndvi_2018__median",
+    "ndvi_2022__mean",
+    "ndvi_2022__std",
+    "ndvi_2022__min",
+    "ndvi_2022__max",
+    "ndvi_2022__median",
+    "b02_2018__mean",
+    "b02_2018__std",
+    "b02_2018__min",
+    "b02_2018__max",
+    "b02_2018__median",
+    "b03_2018__mean",
+    "b03_2018__std",
+    "b03_2018__min",
+    "b03_2018__max",
+    "b03_2018__median",
+    "b04_2018__mean",
+    "b04_2018__std",
+    "b04_2018__min",
+    "b04_2018__max",
+    "b04_2018__median",
+    "b08_2018__mean",
+    "b08_2018__std",
+    "b08_2018__min",
+    "b08_2018__max",
+    "b08_2018__median",
+    "b02_2022__mean",
+    "b02_2022__std",
+    "b02_2022__min",
+    "b02_2022__max",
+    "b02_2022__median",
+    "b03_2022__mean",
+    "b03_2022__std",
+    "b03_2022__min",
+    "b03_2022__max",
+    "b03_2022__median",
+    "b04_2022__mean",
+    "b04_2022__std",
+    "b04_2022__min",
+    "b04_2022__max",
+    "b04_2022__median",
+    "b08_2022__mean",
+    "b08_2022__std",
+    "b08_2022__min",
+    "b08_2022__max",
+    "b08_2022__median"
+  ],
+  "threshold_selection": {
+    "threshold": 0.446,
+    "validation_recall": 0.75,
+    "validation_precision": 0.7032418952618454,
+    "validation_f1": 0.7258687258687259,
+    "minimum_recall_constraint_met": true
+  },
+  "metrics_by_split": {
+    "train": {
+      "row_count": 16832,
+      "positive_count": 6236,
+      "negative_count": 10596,
+      "threshold": 0.446,
+      "roc_auc": 0.9999782525314235,
+      "pr_auc": 0.9999631015110579,
+      "precision": 0.9971153846153846,
+      "recall": 0.9977549711353432,
+      "f1": 0.9974350753446618,
+      "false_negative_rate": 0.0022450288646568314,
+      "confusion_matrix": {
+        "tn": 10578,
+        "fp": 18,
+        "fn": 14,
+        "tp": 6222
+      }
+    },
+    "validation": {
+      "row_count": 4030,
+      "positive_count": 752,
+      "negative_count": 3278,
+      "threshold": 0.446,
+      "roc_auc": 0.8620063803824335,
+      "pr_auc": 0.7935106463801036,
+      "precision": 0.7032418952618454,
+      "recall": 0.75,
+      "f1": 0.7258687258687259,
+      "false_negative_rate": 0.25,
+      "confusion_matrix": {
+        "tn": 3040,
+        "fp": 238,
+        "fn": 188,
+        "tp": 564
+      }
+    },
+    "test": {
+      "row_count": 15874,
+      "positive_count": 417,
+      "negative_count": 15457,
+      "threshold": 0.446,
+      "roc_auc": 0.7135829280549164,
+      "pr_auc": 0.17196475054360766,
+      "precision": 0.09410043881033642,
+      "recall": 0.4628297362110312,
+      "f1": 0.15640194489465153,
+      "false_negative_rate": 0.5371702637889688,
+      "confusion_matrix": {
+        "tn": 13599,
+        "fp": 1858,
+        "fn": 224,
+        "tp": 193
+      }
+    }
+  },
+  "quality_gates": {
+    "test_roc_auc": {
+      "value": 0.7135829280549164,
+      "minimum": 0.9,
+      "passed": false
+    },
+    "test_pr_auc": {
+      "value": 0.17196475054360766,
+      "minimum": 0.65,
+      "passed": false
+    },
+    "test_recall": {
+      "value": 0.4628297362110312,
+      "minimum": 0.75,
+      "passed": false
+    }
+  },
+  "quality_gate_status": "FAILED",
+  "artifacts": {
+    "model_artifact": "models/baseline_random_forest.joblib",
+    "metrics": "reports/baseline/baseline_metrics.json",
+    "predictions": "reports/baseline/baseline_predictions.csv",
+    "feature_importance": "reports/baseline/feature_importance.csv"
+  },
+  "runtime": {
+    "python": "3.9.1",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.5.3"
+  }
+}

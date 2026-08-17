@@ -1,0 +1,120 @@
+{
+  "task": "3.12",
+  "status": "COMPLETED",
+  "created_at_utc": "2026-08-09T05:43:49.071609+00:00",
+  "diagnostic_only": true,
+  "model_retrained": false,
+  "test_used_for_training_or_selection": false,
+  "reference_split": "train",
+  "comparison_splits": [
+    "validation",
+    "test"
+  ],
+  "model_quality_gate_status": "FAILED",
+  "train_positive_rate": 0.37048479087452474,
+  "test_positive_rate": 0.026269371298979462,
+  "positive_rate_ratio_test_to_train": 0.07090539732271044,
+  "severely_shifted_test_feature_count": 94,
+  "top_shifted_test_features": [
+    {
+      "feature": "b04_2022__max",
+      "standardized_mean_difference": 1.3457832336425781,
+      "population_stability_index": 2.0101791819723154,
+      "jensen_shannon_divergence": 0.281148152691089,
+      "model_importance": 0.0618876818803277,
+      "importance_weighted_smd": 0.0832874046435506
+    },
+    {
+      "feature": "ndvi_diff__mean",
+      "standardized_mean_difference": 2.7622690200805664,
+      "population_stability_index": 21.798944945604713,
+      "jensen_shannon_divergence": 0.935204204709953,
+      "model_importance": 0.023582970320348,
+      "importance_weighted_smd": 0.06514250831737675
+    },
+    {
+      "feature": "ndvi_diff__p10",
+      "standardized_mean_difference": 2.859285831451416,
+      "population_stability_index": 31.174776401015464,
+      "jensen_shannon_divergence": 0.9303067380819634,
+      "model_importance": 0.0221344660814631,
+      "importance_weighted_smd": 0.06328876525346938
+    },
+    {
+      "feature": "ndvi_diff__p25",
+      "standardized_mean_difference": 2.862398862838745,
+      "population_stability_index": 31.47392774083257,
+      "jensen_shannon_divergence": 0.9299785679754429,
+      "model_importance": 0.0184108436128694,
+      "importance_weighted_smd": 0.052699177821379346
+    },
+    {
+      "feature": "b02_2022__std",
+      "standardized_mean_difference": 1.3930238485336304,
+      "population_stability_index": 2.5088572138678362,
+      "jensen_shannon_divergence": 0.3342950123837316,
+      "model_importance": 0.0348229838980336,
+      "importance_weighted_smd": 0.04850924704706341
+    },
+    {
+      "feature": "ndvi_diff__median",
+      "standardized_mean_difference": 2.845567226409912,
+      "population_stability_index": 31.77931230147435,
+      "jensen_shannon_divergence": 0.9340536927395751,
+      "model_importance": 0.016049827179531,
+      "importance_weighted_smd": 0.04567086221161645
+    },
+    {
+      "feature": "b02_2022__max",
+      "standardized_mean_difference": 1.0333279371261597,
+      "population_stability_index": 1.1289749488102152,
+      "jensen_shannon_divergence": 0.18019305985621756,
+      "model_importance": 0.0425877849845238,
+      "importance_weighted_smd": 0.04400714800483042
+    },
+    {
+      "feature": "ndvi_2022__p25",
+      "standardized_mean_difference": 1.7167792320251465,
+      "population_stability_index": 4.866803507740611,
+      "jensen_shannon_divergence": 0.531012443482693,
+      "model_importance": 0.0202587823901525,
+      "importance_weighted_smd": 0.03477985687353057
+    },
+    {
+      "feature": "ndvi_diff__p75",
+      "standardized_mean_difference": 2.730430841445923,
+      "population_stability_index": 23.772029763303852,
+      "jensen_shannon_divergence": 0.9337508540245975,
+      "model_importance": 0.0116445638184931,
+      "importance_weighted_smd": 0.031794676185198864
+    },
+    {
+      "feature": "ndvi_2022__p10",
+      "standardized_mean_difference": 1.7717077732086182,
+      "population_stability_index": 5.072734912178936,
+      "jensen_shannon_divergence": 0.5391440273726793,
+      "model_importance": 0.0150562811705731,
+      "importance_weighted_smd": 0.026675330385518916
+    }
+  ],
+  "input_sha256": {
+    "modeling_manifest": "5f917dd5512ced5ac2b069651916b761122fecf081e0ea05d6c85297e497a88f",
+    "improved_model": "924e0bc3087146833b1c3042f71bed446f8a91bcf7c74e40852889ba9377d515",
+    "improved_metrics": "0b257686be8a00e8e11c7735be4dfd58b06b54d82f021bd98a5b6866f5dadb07",
+    "improved_predictions": "5882426bc42ea4e991f05a638a729f635109bb6e699adb8166d1328d0d171931",
+    "feature_importance": "5ae93552ea54b1df98bb3d7520a8fb1172ee8aa435d355c861dc706d60be0d74"
+  },
+  "config_sha256": "da10af6667ef0bc9caa8224ed292d3a046805a7f5426fe5a417e30123181c896",
+  "artifacts": {
+    "summary": "reports/domain_shift/domain_shift_summary.json",
+    "split_profile": "reports/domain_shift/split_profile.csv",
+    "aoi_profile": "reports/domain_shift/aoi_profile.csv",
+    "feature_shift": "reports/domain_shift/feature_shift.csv",
+    "error_analysis": "reports/domain_shift/error_analysis.csv",
+    "spatial_error_grid": "reports/domain_shift/spatial_error_grid.csv",
+    "recommendations": "reports/domain_shift/recommendations.json",
+    "feature_shift_plot": "reports/domain_shift/feature_shift_top20.png",
+    "error_plot": "reports/domain_shift/test_error_counts.png",
+    "validation_summary": "data/manifests/domain_shift_validation_summary.json"
+  }
+}

@@ -1,0 +1,826 @@
+{
+  "task": "3.7",
+  "status": "passed",
+  "expected_feature_count": 11,
+  "feature_names": [
+    "blue_2018",
+    "green_2018",
+    "red_2018",
+    "nir_2018",
+    "blue_2022",
+    "green_2022",
+    "red_2022",
+    "nir_2022",
+    "ndvi_2018",
+    "ndvi_2022",
+    "ndvi_change"
+  ],
+  "minimum_valid_coverage_pct": 80.0,
+  "coverage_denominator": "label_eligible_pixels",
+  "aoi_results": [
+    {
+      "aoi_id": "iberia_final_holdout",
+      "aoi_role": "final_geographic_holdout",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\iberia_final_holdout\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\iberia_final_holdout\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\iberia_final_holdout\\loss_binary.tif",
+      "width": 1531,
+      "height": 1331,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 2037761,
+      "label_eligible_pixel_count": 1780768,
+      "valid_pixel_count": 1780768,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 87.3885,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 0.011699999682605267,
+          "maximum": 0.17440000176429749,
+          "mean": 0.02486910286543259,
+          "standard_deviation": 0.005036657772748166,
+          "valid_pixel_count": 1780768
+        },
+        "green_2018": {
+          "minimum": 0.013100000098347664,
+          "maximum": 0.2298000007867813,
+          "mean": 0.03816539598995484,
+          "standard_deviation": 0.00832246426377496,
+          "valid_pixel_count": 1780768
+        },
+        "red_2018": {
+          "minimum": 0.00839999970048666,
+          "maximum": 0.30219998955726624,
+          "mean": 0.023614267632819496,
+          "standard_deviation": 0.008812401687566435,
+          "valid_pixel_count": 1780768
+        },
+        "nir_2018": {
+          "minimum": 0.019899999722838402,
+          "maximum": 0.5619999766349792,
+          "mean": 0.2732277736046162,
+          "standard_deviation": 0.051682504043181685,
+          "valid_pixel_count": 1780768
+        },
+        "blue_2022": {
+          "minimum": 0.08949999511241913,
+          "maximum": 0.36640000343322754,
+          "mean": 0.1247748077047049,
+          "standard_deviation": 0.0072086621509344796,
+          "valid_pixel_count": 1780768
+        },
+        "green_2022": {
+          "minimum": 0.10689999908208847,
+          "maximum": 0.5127999782562256,
+          "mean": 0.13891744379935686,
+          "standard_deviation": 0.011224663928470621,
+          "valid_pixel_count": 1780768
+        },
+        "red_2022": {
+          "minimum": 0.10679999738931656,
+          "maximum": 0.4615999758243561,
+          "mean": 0.12485757442443868,
+          "standard_deviation": 0.014254717601372924,
+          "valid_pixel_count": 1780768
+        },
+        "nir_2022": {
+          "minimum": 0.12439999729394913,
+          "maximum": 0.6647999882698059,
+          "mean": 0.3684867206847842,
+          "standard_deviation": 0.04506486318469247,
+          "valid_pixel_count": 1780768
+        },
+        "ndvi_2018": {
+          "minimum": -0.3766990900039673,
+          "maximum": 0.9258918166160583,
+          "mean": 0.8364562332807169,
+          "standard_deviation": 0.07389957892656372,
+          "valid_pixel_count": 1780768
+        },
+        "ndvi_2022": {
+          "minimum": -0.18557190895080566,
+          "maximum": 0.671299159526825,
+          "mean": 0.49057404141612604,
+          "standard_deviation": 0.06418742219301403,
+          "valid_pixel_count": 1780768
+        },
+        "ndvi_change": {
+          "minimum": -1.0472708940505981,
+          "maximum": 0.9855884313583374,
+          "mean": -0.3458821918781755,
+          "standard_deviation": 0.06852330791781557,
+          "valid_pixel_count": 1780768
+        }
+      },
+      "sha256": "37e533a659a9520bc8ecb68998ee42fcc236501c015125dcacffeb1b67cfc06e",
+      "status": "passed",
+      "errors": [],
+      "warnings": [
+        "Unexpected development AOI role: final_geographic_holdout"
+      ]
+    },
+    {
+      "aoi_id": "inambari_development",
+      "aoi_role": "dataset_development",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\inambari_development\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\inambari_development\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\inambari_development\\loss_binary.tif",
+      "width": 1524,
+      "height": 1335,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 2034540,
+      "label_eligible_pixel_count": 1988545,
+      "valid_pixel_count": 1988545,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 97.7393,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 0.0038999998942017555,
+          "maximum": 0.6011999845504761,
+          "mean": 0.02108732074911446,
+          "standard_deviation": 0.013826843077322284,
+          "valid_pixel_count": 1988545
+        },
+        "green_2018": {
+          "minimum": 0.0066999997943639755,
+          "maximum": 0.5623999834060669,
+          "mean": 0.038299134933455506,
+          "standard_deviation": 0.014779801139104685,
+          "valid_pixel_count": 1988545
+        },
+        "red_2018": {
+          "minimum": 0.00419999985024333,
+          "maximum": 0.49079999327659607,
+          "mean": 0.02277945375009213,
+          "standard_deviation": 0.014036592101479102,
+          "valid_pixel_count": 1988545
+        },
+        "nir_2018": {
+          "minimum": 0.02290000021457672,
+          "maximum": 1.2999999523162842,
+          "mean": 0.26270602028108475,
+          "standard_deviation": 0.048145205524440585,
+          "valid_pixel_count": 1988545
+        },
+        "blue_2022": {
+          "minimum": 0.10379999876022339,
+          "maximum": 0.2595999836921692,
+          "mean": 0.11779210292292452,
+          "standard_deviation": 0.004481955416898434,
+          "valid_pixel_count": 1988545
+        },
+        "green_2022": {
+          "minimum": 0.10449999570846558,
+          "maximum": 0.30699998140335083,
+          "mean": 0.13101145081837967,
+          "standard_deviation": 0.007582862290827813,
+          "valid_pixel_count": 1988545
+        },
+        "red_2022": {
+          "minimum": 0.10209999978542328,
+          "maximum": 0.3463999927043915,
+          "mean": 0.11714318632730931,
+          "standard_deviation": 0.0055096210995499535,
+          "valid_pixel_count": 1988545
+        },
+        "nir_2022": {
+          "minimum": 0.1193000003695488,
+          "maximum": 0.9199999570846558,
+          "mean": 0.3511885068785577,
+          "standard_deviation": 0.053071252408664095,
+          "valid_pixel_count": 1988545
+        },
+        "ndvi_2018": {
+          "minimum": -0.45391181111335754,
+          "maximum": 0.9307985901832581,
+          "mean": 0.8431228369681446,
+          "standard_deviation": 0.06634020167521244,
+          "valid_pixel_count": 1988545
+        },
+        "ndvi_2022": {
+          "minimum": -0.10144894570112228,
+          "maximum": 0.7162571549415588,
+          "mean": 0.4941023535320774,
+          "standard_deviation": 0.052091371081775605,
+          "valid_pixel_count": 1988545
+        },
+        "ndvi_change": {
+          "minimum": -0.9422979354858398,
+          "maximum": 0.5053178668022156,
+          "mean": -0.3490204834881112,
+          "standard_deviation": 0.07232801168250594,
+          "valid_pixel_count": 1988545
+        }
+      },
+      "sha256": "2ee6fda73fbef6a1bc2f274a7cea11c0d728f9c0332ec7d08bbe255e779e7be2",
+      "status": "passed",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "aoi_id": "la_pampa",
+      "aoi_role": "dataset_development",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\la_pampa\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\la_pampa\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\la_pampa\\loss_binary.tif",
+      "width": 1307,
+      "height": 1112,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 1453384,
+      "label_eligible_pixel_count": 938753,
+      "valid_pixel_count": 938753,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 64.5908,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 9.999999747378752e-05,
+          "maximum": 0.25519999861717224,
+          "mean": 0.015871354575859812,
+          "standard_deviation": 0.01900107289078339,
+          "valid_pixel_count": 938753
+        },
+        "green_2018": {
+          "minimum": 0.003000000026077032,
+          "maximum": 0.3449999988079071,
+          "mean": 0.03481897049032821,
+          "standard_deviation": 0.027674730639919272,
+          "valid_pixel_count": 938753
+        },
+        "red_2018": {
+          "minimum": 0.00029999998514540493,
+          "maximum": 0.41439998149871826,
+          "mean": 0.02427574891706846,
+          "standard_deviation": 0.03996848165803911,
+          "valid_pixel_count": 938753
+        },
+        "nir_2018": {
+          "minimum": 0.010300000198185444,
+          "maximum": 0.578000009059906,
+          "mean": 0.25003068118174365,
+          "standard_deviation": 0.04869536649818906,
+          "valid_pixel_count": 938753
+        },
+        "blue_2022": {
+          "minimum": 0.10339999943971634,
+          "maximum": 0.3431999981403351,
+          "mean": 0.12143773199607588,
+          "standard_deviation": 0.012504345888304486,
+          "valid_pixel_count": 938753
+        },
+        "green_2022": {
+          "minimum": 0.10749999433755875,
+          "maximum": 0.4179999828338623,
+          "mean": 0.1361899970084792,
+          "standard_deviation": 0.01795909601830469,
+          "valid_pixel_count": 938753
+        },
+        "red_2022": {
+          "minimum": 0.10449999570846558,
+          "maximum": 0.5051999688148499,
+          "mean": 0.12353911783666534,
+          "standard_deviation": 0.02508661086353974,
+          "valid_pixel_count": 938753
+        },
+        "nir_2022": {
+          "minimum": 0.11329999566078186,
+          "maximum": 0.6775999665260315,
+          "mean": 0.36404637514380517,
+          "standard_deviation": 0.05193771648596535,
+          "valid_pixel_count": 938753
+        },
+        "ndvi_2018": {
+          "minimum": -0.664699375629425,
+          "maximum": 0.9967774748802185,
+          "mean": 0.8399316536865807,
+          "standard_deviation": 0.16910751758018172,
+          "valid_pixel_count": 938753
+        },
+        "ndvi_2022": {
+          "minimum": -0.31621259450912476,
+          "maximum": 0.6927295923233032,
+          "mean": 0.4892276948395904,
+          "standard_deviation": 0.09587891110312904,
+          "valid_pixel_count": 938753
+        },
+        "ndvi_change": {
+          "minimum": -1.193093180656433,
+          "maximum": 0.874574601650238,
+          "mean": -0.3507039588995521,
+          "standard_deviation": 0.11654483938359743,
+          "valid_pixel_count": 938753
+        }
+      },
+      "sha256": "5857fd59048b7124cb0e8ba0c71c505634038a1b0bd58b97f532ec8e7b4e1394",
+      "status": "passed",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "aoi_id": "laberinto_development",
+      "aoi_role": "dataset_development",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\laberinto_development\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\laberinto_development\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\laberinto_development\\loss_binary.tif",
+      "width": 1525,
+      "height": 1331,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 2029775,
+      "label_eligible_pixel_count": 2007277,
+      "valid_pixel_count": 2007277,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 98.8916,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 0.007199999876320362,
+          "maximum": 0.13619999587535858,
+          "mean": 0.020978816242673618,
+          "standard_deviation": 0.003507498798385536,
+          "valid_pixel_count": 2007277
+        },
+        "green_2018": {
+          "minimum": 0.010300000198185444,
+          "maximum": 0.21459999680519104,
+          "mean": 0.03745099749892441,
+          "standard_deviation": 0.0064184602714117515,
+          "valid_pixel_count": 2007277
+        },
+        "red_2018": {
+          "minimum": 0.0066999997943639755,
+          "maximum": 0.20899999141693115,
+          "mean": 0.021560110341332532,
+          "standard_deviation": 0.0045959906886650454,
+          "valid_pixel_count": 2007277
+        },
+        "nir_2018": {
+          "minimum": 0.009399999864399433,
+          "maximum": 0.7328000068664551,
+          "mean": 0.2806048601977893,
+          "standard_deviation": 0.04272464138368835,
+          "valid_pixel_count": 2007277
+        },
+        "blue_2022": {
+          "minimum": 0.1005999967455864,
+          "maximum": 0.28700000047683716,
+          "mean": 0.11614851303200842,
+          "standard_deviation": 0.004997960648946936,
+          "valid_pixel_count": 2007277
+        },
+        "green_2022": {
+          "minimum": 0.1005999967455864,
+          "maximum": 0.44439998269081116,
+          "mean": 0.13332160434017967,
+          "standard_deviation": 0.00840786798369234,
+          "valid_pixel_count": 2007277
+        },
+        "red_2022": {
+          "minimum": 0.1030999943614006,
+          "maximum": 0.5227999687194824,
+          "mean": 0.11778463925208665,
+          "standard_deviation": 0.008242894636874054,
+          "valid_pixel_count": 2007277
+        },
+        "nir_2022": {
+          "minimum": 0.12639999389648438,
+          "maximum": 0.8367999792098999,
+          "mean": 0.38082099071395603,
+          "standard_deviation": 0.046592992613472384,
+          "valid_pixel_count": 2007277
+        },
+        "ndvi_2018": {
+          "minimum": -0.6690022945404053,
+          "maximum": 0.9326923489570618,
+          "mean": 0.855712515693127,
+          "standard_deviation": 0.04258043367822063,
+          "valid_pixel_count": 2007277
+        },
+        "ndvi_2022": {
+          "minimum": -0.34314075112342834,
+          "maximum": 0.7315853834152222,
+          "mean": 0.5238252379831067,
+          "standard_deviation": 0.05145518488316078,
+          "valid_pixel_count": 2007277
+        },
+        "ndvi_change": {
+          "minimum": -1.2025609016418457,
+          "maximum": 0.6960180401802063,
+          "mean": -0.33188727772674764,
+          "standard_deviation": 0.05094120904496007,
+          "valid_pixel_count": 2007277
+        }
+      },
+      "sha256": "05fb6e21e6ecffcf8f1db094aca39a3244791e507499f61aef3b80bbd95b9f60",
+      "status": "passed",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "aoi_id": "las_piedras_development",
+      "aoi_role": "dataset_development",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\las_piedras_development\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\las_piedras_development\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\las_piedras_development\\loss_binary.tif",
+      "width": 1526,
+      "height": 1329,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 2028054,
+      "label_eligible_pixel_count": 1932542,
+      "valid_pixel_count": 1932542,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 95.2905,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 0.01939999870955944,
+          "maximum": 0.17459999024868011,
+          "mean": 0.03119239099009367,
+          "standard_deviation": 0.0036973354784416257,
+          "valid_pixel_count": 1932542
+        },
+        "green_2018": {
+          "minimum": 0.020399998873472214,
+          "maximum": 0.21599999070167542,
+          "mean": 0.044632558287142854,
+          "standard_deviation": 0.006262664906639599,
+          "valid_pixel_count": 1932542
+        },
+        "red_2018": {
+          "minimum": 0.012199999764561653,
+          "maximum": 0.2587999999523163,
+          "mean": 0.027221418159034914,
+          "standard_deviation": 0.006135719329805723,
+          "valid_pixel_count": 1932542
+        },
+        "nir_2018": {
+          "minimum": 0.04309999942779541,
+          "maximum": 0.5379999876022339,
+          "mean": 0.29353803371021164,
+          "standard_deviation": 0.03702446239383554,
+          "valid_pixel_count": 1932542
+        },
+        "blue_2022": {
+          "minimum": 0.09789999574422836,
+          "maximum": 0.6019999980926514,
+          "mean": 0.11259338322957087,
+          "standard_deviation": 0.004092582387862719,
+          "valid_pixel_count": 1932542
+        },
+        "green_2022": {
+          "minimum": 0.10260000079870224,
+          "maximum": 0.7119999527931213,
+          "mean": 0.13028849923345137,
+          "standard_deviation": 0.007511413912271609,
+          "valid_pixel_count": 1932542
+        },
+        "red_2022": {
+          "minimum": 0.10159999877214432,
+          "maximum": 0.8115999698638916,
+          "mean": 0.11572778872487653,
+          "standard_deviation": 0.0054067400634848885,
+          "valid_pixel_count": 1932542
+        },
+        "nir_2022": {
+          "minimum": 0.13259999454021454,
+          "maximum": 0.7587999701499939,
+          "mean": 0.3769152627611103,
+          "standard_deviation": 0.04839970128688393,
+          "valid_pixel_count": 1932542
+        },
+        "ndvi_2018": {
+          "minimum": 0.14872916042804718,
+          "maximum": 0.9150750637054443,
+          "mean": 0.8291205601123438,
+          "standard_deviation": 0.03662337564091449,
+          "valid_pixel_count": 1932542
+        },
+        "ndvi_2022": {
+          "minimum": -0.06119241192936897,
+          "maximum": 0.6974291801452637,
+          "mean": 0.5261784849370575,
+          "standard_deviation": 0.04271428892967362,
+          "valid_pixel_count": 1932542
+        },
+        "ndvi_change": {
+          "minimum": -0.889396607875824,
+          "maximum": 0.3629979193210602,
+          "mean": -0.3029420751572267,
+          "standard_deviation": 0.052335634424780224,
+          "valid_pixel_count": 1932542
+        }
+      },
+      "sha256": "34cdfd1f04a97ca8b4943d8be33b7cdd76e33e316213e7bf2d28d6f0682ffa30",
+      "status": "passed",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "aoi_id": "mining_training_area",
+      "aoi_role": "dataset_development",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\mining_training_area\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\mining_training_area\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\mining_training_area\\loss_binary.tif",
+      "width": 1636,
+      "height": 1337,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 2187332,
+      "label_eligible_pixel_count": 1697653,
+      "valid_pixel_count": 1697653,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 77.613,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 0.006399999838322401,
+          "maximum": 0.5108000040054321,
+          "mean": 0.022545365299899783,
+          "standard_deviation": 0.011240485456816808,
+          "valid_pixel_count": 1697653
+        },
+        "green_2018": {
+          "minimum": 0.008200000040233135,
+          "maximum": 0.5539999604225159,
+          "mean": 0.03989809771742445,
+          "standard_deviation": 0.01690993150805842,
+          "valid_pixel_count": 1697653
+        },
+        "red_2018": {
+          "minimum": 0.005799999926239252,
+          "maximum": 0.6687999963760376,
+          "mean": 0.024769254398820092,
+          "standard_deviation": 0.022776357249283275,
+          "valid_pixel_count": 1697653
+        },
+        "nir_2018": {
+          "minimum": 0.018299998715519905,
+          "maximum": 1.0095999240875244,
+          "mean": 0.2752974363719826,
+          "standard_deviation": 0.05221935834635897,
+          "valid_pixel_count": 1697653
+        },
+        "blue_2022": {
+          "minimum": 0.09290000051259995,
+          "maximum": 0.7307999730110168,
+          "mean": 0.1219362541318838,
+          "standard_deviation": 0.012903635060161438,
+          "valid_pixel_count": 1697653
+        },
+        "green_2022": {
+          "minimum": 0.10529999434947968,
+          "maximum": 0.7211999893188477,
+          "mean": 0.13827289162193598,
+          "standard_deviation": 0.01895557198426772,
+          "valid_pixel_count": 1697653
+        },
+        "red_2022": {
+          "minimum": 0.10260000079870224,
+          "maximum": 0.6843999624252319,
+          "mean": 0.12396332040639046,
+          "standard_deviation": 0.024689344542888667,
+          "valid_pixel_count": 1697653
+        },
+        "nir_2022": {
+          "minimum": 0.09759999811649323,
+          "maximum": 1.1496000289916992,
+          "mean": 0.38236487813066977,
+          "standard_deviation": 0.06821418709714627,
+          "valid_pixel_count": 1697653
+        },
+        "ndvi_2018": {
+          "minimum": -0.4871135652065277,
+          "maximum": 0.9329946637153625,
+          "mean": 0.8328321354037139,
+          "standard_deviation": 0.1524174627644392,
+          "valid_pixel_count": 1697653
+        },
+        "ndvi_2022": {
+          "minimum": -0.2755264937877655,
+          "maximum": 0.761568546295166,
+          "mean": 0.5030681341738544,
+          "standard_deviation": 0.11402324877010889,
+          "valid_pixel_count": 1697653
+        },
+        "ndvi_change": {
+          "minimum": -1.0964710712432861,
+          "maximum": 0.922451913356781,
+          "mean": -0.32976400120211763,
+          "standard_deviation": 0.10883239273751076,
+          "valid_pixel_count": 1697653
+        }
+      },
+      "sha256": "f1779fc9e8943165ef7ecbb292ac06ef964cb43adf38ed938810acf6c99d13c7",
+      "status": "passed",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "aoi_id": "tambopata_test_area",
+      "aoi_role": "geographic_holdout",
+      "feature_stack_path": "data\\processed\\model_features_task_3_14\\tambopata_test_area\\model_features.tif",
+      "model_valid_mask_path": "data\\processed\\model_features_task_3_14\\tambopata_test_area\\model_valid_mask.tif",
+      "label_path": "data\\processed\\labels_task_3_14\\tambopata_test_area\\loss_binary.tif",
+      "width": 1306,
+      "height": 1111,
+      "crs": "EPSG:32719",
+      "resolution_m": 10.0,
+      "feature_count": 11,
+      "feature_names": [
+        "blue_2018",
+        "green_2018",
+        "red_2018",
+        "nir_2018",
+        "blue_2022",
+        "green_2022",
+        "red_2022",
+        "nir_2022",
+        "ndvi_2018",
+        "ndvi_2022",
+        "ndvi_change"
+      ],
+      "nodata": -9999.0,
+      "aoi_pixel_count": 1450966,
+      "label_eligible_pixel_count": 1355199,
+      "valid_pixel_count": 1355199,
+      "valid_coverage_pct": 100.0,
+      "overall_aoi_coverage_pct": 93.3998,
+      "feature_statistics": {
+        "blue_2018": {
+          "minimum": 0.012399999424815178,
+          "maximum": 0.26319998502731323,
+          "mean": 0.026555552202154737,
+          "standard_deviation": 0.008658889512979964,
+          "valid_pixel_count": 1355199
+        },
+        "green_2018": {
+          "minimum": 0.012899999506771564,
+          "maximum": 0.2773999869823456,
+          "mean": 0.039158660199759554,
+          "standard_deviation": 0.01347242893394329,
+          "valid_pixel_count": 1355199
+        },
+        "red_2018": {
+          "minimum": 0.007199999876320362,
+          "maximum": 0.3783999979496002,
+          "mean": 0.02428324870635548,
+          "standard_deviation": 0.020922670899423783,
+          "valid_pixel_count": 1355199
+        },
+        "nir_2018": {
+          "minimum": 0.02449999935925007,
+          "maximum": 0.5392000079154968,
+          "mean": 0.2538248059218087,
+          "standard_deviation": 0.04443000590936386,
+          "valid_pixel_count": 1355199
+        },
+        "blue_2022": {
+          "minimum": 0.11209999769926071,
+          "maximum": 0.31439998745918274,
+          "mean": 0.1272514306684707,
+          "standard_deviation": 0.01107820408673307,
+          "valid_pixel_count": 1355199
+        },
+        "green_2022": {
+          "minimum": 0.11620000004768372,
+          "maximum": 0.38119998574256897,
+          "mean": 0.14161312134483656,
+          "standard_deviation": 0.015523704024213608,
+          "valid_pixel_count": 1355199
+        },
+        "red_2022": {
+          "minimum": 0.1070999950170517,
+          "maximum": 0.4659999907016754,
+          "mean": 0.12756567132876737,
+          "standard_deviation": 0.02305433683939459,
+          "valid_pixel_count": 1355199
+        },
+        "nir_2022": {
+          "minimum": 0.11629999428987503,
+          "maximum": 0.6728000044822693,
+          "mean": 0.3703037919496949,
+          "standard_deviation": 0.04508865586892975,
+          "valid_pixel_count": 1355199
+        },
+        "ndvi_2018": {
+          "minimum": -0.5400766134262085,
+          "maximum": 0.9268328547477722,
+          "mean": 0.8254602176431434,
+          "standard_deviation": 0.12702806477264714,
+          "valid_pixel_count": 1355199
+        },
+        "ndvi_2022": {
+          "minimum": -0.29953163862228394,
+          "maximum": 0.6863278746604919,
+          "mean": 0.4847474190092112,
+          "standard_deviation": 0.08804757691295854,
+          "valid_pixel_count": 1355199
+        },
+        "ndvi_change": {
+          "minimum": -1.1529020071029663,
+          "maximum": 0.9886050820350647,
+          "mean": -0.34071279865803655,
+          "standard_deviation": 0.09512272506085934,
+          "valid_pixel_count": 1355199
+        }
+      },
+      "sha256": "29313770b4a395dff18e864acd65b309eb5f0416f7bf3c8b44341cf88df27570",
+      "status": "passed",
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "iberia_final_holdout: Unexpected development AOI role: final_geographic_holdout"
+  ]
+}

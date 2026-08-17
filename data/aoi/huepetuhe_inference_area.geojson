@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "huepetuhe_inference_area",
+        "label": "Huepetuhe Inference Area, Madre de Dios, Peru",
+        "aoi_role": "inference_only"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-70.7500, -13.0000],
+            [-70.7500, -12.8800],
+            [-70.6100, -12.8800],
+            [-70.6100, -13.0000],
+            [-70.7500, -13.0000]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Run with src/inference/run_patch_inference.py.  Paths are supplied as CLI
+# arguments so every inference run is explicit and reproducible.
+contract:
+  model_artifact: models/task_3_14/precision_aware_extra_trees.joblib
+  required_manifest_columns: [patch_id, aoi_id, feature_patch_path, row_off, col_off]
+  required_reference_raster: aligned 11-band Task 3.14 feature stack
+  expected_patch_size: 32
+outputs: [predictions.csv, rejected_patches.csv, aoi_summary.csv, prediction_map.geojson, run_report.json]

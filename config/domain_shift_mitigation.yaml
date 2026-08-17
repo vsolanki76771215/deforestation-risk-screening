@@ -1,0 +1,54 @@
+task: "3.13"
+random_seed: 42
+
+inputs:
+  modeling_manifest: data/manifests/modeling_dataset.csv
+  improved_metrics: reports/improved/improved_model_metrics.json
+  domain_shift_feature_table: reports/domain_shift/feature_shift.csv
+
+columns:
+  patch_id: patch_id
+  aoi_id: aoi_id
+  feature_patch_path: feature_patch_path
+  target: loss_binary
+  split: split
+
+features:
+  archive_key: features
+  channel_names: [ndvi_diff, ndvi_2018, ndvi_2022, b02_2018, b03_2018, b04_2018, b08_2018, b02_2022, b03_2022, b04_2022, b08_2022]
+  expected_patch_size: 32
+  statistics: [mean, std, min, p10, p25, median, p75, p90, max]
+  forbidden_predictor_columns: [loss_fraction, positive_pixels, negative_pixels, loss_binary]
+
+mitigation:
+  # Only train-to-validation drift is allowed for feature ablation. Test drift is forbidden.
+  ablation_comparison_split: validation
+  ablate_top_n: [10, 20]
+  selection_metric: validation_pr_auc
+  minimum_recall: 0.75
+  maximum_false_positive_rate: 0.10
+  threshold_grid_points: 1001
+  calibration_cv_folds: 3
+  n_jobs: -1
+  candidates:
+    - {model: ExtraTreesClassifier, feature_set: all, calibration: none, n_estimators: 600, max_depth: null, min_samples_leaf: 4, max_features: sqrt, class_weight: balanced}
+    - {model: ExtraTreesClassifier, feature_set: ablate_top_10, calibration: none, n_estimators: 600, max_depth: null, min_samples_leaf: 4, max_features: sqrt, class_weight: balanced}
+    - {model: ExtraTreesClassifier, feature_set: ablate_top_20, calibration: none, n_estimators: 600, max_depth: null, min_samples_leaf: 4, max_features: sqrt, class_weight: balanced}
+    - {model: RandomForestClassifier, feature_set: ablate_top_20, calibration: none, n_estimators: 600, max_depth: null, min_samples_leaf: 4, max_features: sqrt, class_weight: balanced_subsample}
+    - {model: ExtraTreesClassifier, feature_set: ablate_top_20, calibration: sigmoid, n_estimators: 600, max_depth: null, min_samples_leaf: 4, max_features: sqrt, class_weight: balanced}
+
+quality_gates:
+  test_roc_auc_min: 0.90
+  test_pr_auc_min: 0.65
+  test_recall_min: 0.75
+  test_false_positive_rate_max: 0.10
+
+outputs:
+  model_artifact: models/domain_shift_mitigated_model.joblib
+  metrics: reports/mitigation/domain_shift_mitigation_metrics.json
+  predictions: reports/mitigation/domain_shift_mitigation_predictions.csv
+  experiment_results: reports/mitigation/mitigation_experiments.csv
+  ablated_features: reports/mitigation/ablated_features.csv
+  validation_aoi_metrics: reports/mitigation/validation_aoi_metrics.csv
+  feature_importance: reports/mitigation/feature_importance.csv
+  validation_summary: data/manifests/domain_shift_mitigation_validation_summary.json

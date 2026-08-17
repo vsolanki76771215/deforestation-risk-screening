@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "name": "tambopata_test_area",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi": "tambopata_test_area",
+        "display_name": "Tambopata Forest Test Area",
+        "role": "held_out_test"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-69.8600, -13.0800],
+          [-69.7400, -13.0800],
+          [-69.7400, -12.9800],
+          [-69.8600, -12.9800],
+          [-69.8600, -13.0800]
+        ]]
+      }
+    }
+  ]
+}

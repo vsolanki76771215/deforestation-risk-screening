@@ -1,0 +1,18 @@
+{
+  "task": "3.8",
+  "status": "PASSED",
+  "manifest": "data/manifests/patches_task_3_14.csv",
+  "total_patches": 130651,
+  "held_out_aoi": "tambopata_test_area",
+  "expected_held_out_role": "geographic_holdout",
+  "patches_by_aoi": {
+    "iberia_final_holdout": 14793,
+    "inambari_development": 26427,
+    "la_pampa": 7335,
+    "laberinto_development": 28184,
+    "las_piedras_development": 22804,
+    "mining_training_area": 15234,
+    "tambopata_test_area": 15874
+  },
+  "errors": []
+}

@@ -1,0 +1,105 @@
+{
+  "task": "3.6",
+  "status": "PASSED",
+  "aois": {
+    "la_pampa": {
+      "path": "data\\processed\\labels_task_3_14\\la_pampa\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1307,
+      "height": 1112,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 26539,
+      "negative_pixels": 912214,
+      "nodata_pixels": 514631,
+      "status": "PASSED"
+    },
+    "mining_training_area": {
+      "path": "data\\processed\\labels_task_3_14\\mining_training_area\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1636,
+      "height": 1337,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 227088,
+      "negative_pixels": 1470565,
+      "nodata_pixels": 489679,
+      "status": "PASSED"
+    },
+    "laberinto_development": {
+      "path": "data\\processed\\labels_task_3_14\\laberinto_development\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1525,
+      "height": 1331,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 9468,
+      "negative_pixels": 1997809,
+      "nodata_pixels": 22498,
+      "status": "PASSED"
+    },
+    "las_piedras_development": {
+      "path": "data\\processed\\labels_task_3_14\\las_piedras_development\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1526,
+      "height": 1329,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 31264,
+      "negative_pixels": 1901278,
+      "nodata_pixels": 95512,
+      "status": "PASSED"
+    },
+    "inambari_development": {
+      "path": "data\\processed\\labels_task_3_14\\inambari_development\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1524,
+      "height": 1335,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 259,
+      "negative_pixels": 1988286,
+      "nodata_pixels": 45995,
+      "status": "PASSED"
+    },
+    "tambopata_test_area": {
+      "path": "data\\processed\\labels_task_3_14\\tambopata_test_area\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1306,
+      "height": 1111,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 10447,
+      "negative_pixels": 1344752,
+      "nodata_pixels": 95767,
+      "status": "PASSED"
+    },
+    "iberia_final_holdout": {
+      "path": "data\\processed\\labels_task_3_14\\iberia_final_holdout\\loss_binary.tif",
+      "crs": "EPSG:32719",
+      "width": 1531,
+      "height": 1331,
+      "values": [
+        0,
+        1
+      ],
+      "positive_pixels": 189925,
+      "negative_pixels": 1590843,
+      "nodata_pixels": 256993,
+      "status": "PASSED"
+    }
+  },
+  "errors": []
+}

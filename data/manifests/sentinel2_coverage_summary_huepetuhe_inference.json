@@ -1,0 +1,48 @@
+{
+  "task": "3.3-rank-scenes-and-validate-scl-coverage",
+  "completed_at_utc": "2026-08-14T03:51:42.274523Z",
+  "source_manifest": "data\\manifests\\sentinel2_items_huepetuhe_inference.csv",
+  "excluded_scl_classes": [
+    0,
+    1,
+    3,
+    8,
+    9,
+    10,
+    11
+  ],
+  "minimum_valid_coverage_pct": 80,
+  "expected_aoi_year_count": 2,
+  "actual_aoi_year_count": 2,
+  "status": "passed",
+  "aoi_year_results": [
+    {
+      "aoi_id": "huepetuhe_inference_area",
+      "aoi_role": "inference_only",
+      "target_year": 2018,
+      "candidate_count": 5,
+      "individually_usable_count": 5,
+      "selected_count": 1,
+      "selected_item_ids": [
+        "S2A_MSIL2A_20180828T145721_R039_T19LCF_20201027T054517"
+      ],
+      "combined_valid_coverage_pct": 98.9859,
+      "minimum_required_pct": 80.0,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "huepetuhe_inference_area",
+      "aoi_role": "inference_only",
+      "target_year": 2022,
+      "candidate_count": 6,
+      "individually_usable_count": 6,
+      "selected_count": 1,
+      "selected_item_ids": [
+        "S2B_MSIL2A_20220822T145729_R039_T19LCF_20240704T091633"
+      ],
+      "combined_valid_coverage_pct": 100.0,
+      "minimum_required_pct": 80.0,
+      "status": "passed"
+    }
+  ]
+}

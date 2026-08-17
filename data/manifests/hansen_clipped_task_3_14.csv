@@ -1,0 +1,15 @@
+aoi,layer,version,source_tiles,output_path,crs,width,height,dtype,nodata,valid_pixels,min_value,max_value
+la_pampa,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\la_pampa\treecover2000.tif,EPSG:4326,480,400,uint8,255,192000,0,100
+la_pampa,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\la_pampa\lossyear.tif,EPSG:4326,480,400,uint8,255,192000,0,25
+mining_training_area,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\mining_training_area\treecover2000.tif,EPSG:4326,600,480,uint8,255,288000,0,100
+mining_training_area,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\mining_training_area\lossyear.tif,EPSG:4326,600,480,uint8,255,288000,0,25
+laberinto_development,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\laberinto_development\treecover2000.tif,EPSG:4326,560,480,uint8,255,268800,0,100
+laberinto_development,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\laberinto_development\lossyear.tif,EPSG:4326,560,480,uint8,255,268800,0,25
+las_piedras_development,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\las_piedras_development\treecover2000.tif,EPSG:4326,560,480,uint8,255,268800,0,100
+las_piedras_development,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\las_piedras_development\lossyear.tif,EPSG:4326,560,480,uint8,255,268800,0,25
+inambari_development,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\inambari_development\treecover2000.tif,EPSG:4326,560,480,uint8,255,268800,0,100
+inambari_development,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\inambari_development\lossyear.tif,EPSG:4326,560,480,uint8,255,268800,0,25
+tambopata_test_area,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\tambopata_test_area\treecover2000.tif,EPSG:4326,480,400,uint8,255,192000,0,100
+tambopata_test_area,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\tambopata_test_area\lossyear.tif,EPSG:4326,480,400,uint8,255,192000,0,25
+iberia_final_holdout,treecover2000,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\iberia_final_holdout\treecover2000.tif,EPSG:4326,560,480,uint8,255,268800,0,100
+iberia_final_holdout,lossyear,GFC-2025-v1.13,10S_070W;10S_080W,data\processed\hansen\iberia_final_holdout\lossyear.tif,EPSG:4326,560,480,uint8,255,268800,0,25

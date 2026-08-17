@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "name": "mining_training_area",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi": "mining_training_area",
+        "display_name": "Mining Landscape Training Area",
+        "role": "dataset_development_training"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-70.4500, -12.9500],
+          [-70.3000, -12.9500],
+          [-70.3000, -12.8300],
+          [-70.4500, -12.8300],
+          [-70.4500, -12.9500]
+        ]]
+      }
+    }
+  ]
+}

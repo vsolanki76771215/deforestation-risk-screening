@@ -1,0 +1,125 @@
+{
+  "task": "3.2-sentinel2-stac-discovery",
+  "mode": "metadata_only",
+  "source_version": "task-3.14-1.0",
+  "started_at_utc": "2026-08-09T23:20:24.475049Z",
+  "completed_at_utc": "2026-08-09T23:20:48.256106Z",
+  "query_timestamp_utc": "2026-08-09T23:20:24.475049Z",
+  "status": "passed",
+  "manifest": "data\\manifests\\sentinel2_items_task_3_14.csv",
+  "total_items": 292,
+  "queries": [
+    {
+      "aoi_id": "la_pampa",
+      "aoi_role": "dataset_development",
+      "year": 2018,
+      "item_count": 23,
+      "complete_asset_count": 23,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "la_pampa",
+      "aoi_role": "dataset_development",
+      "year": 2022,
+      "item_count": 36,
+      "complete_asset_count": 36,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "mining_training_area",
+      "aoi_role": "dataset_development",
+      "year": 2018,
+      "item_count": 5,
+      "complete_asset_count": 5,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "mining_training_area",
+      "aoi_role": "dataset_development",
+      "year": 2022,
+      "item_count": 6,
+      "complete_asset_count": 6,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "laberinto_development",
+      "aoi_role": "dataset_development",
+      "year": 2018,
+      "item_count": 22,
+      "complete_asset_count": 22,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "laberinto_development",
+      "aoi_role": "dataset_development",
+      "year": 2022,
+      "item_count": 29,
+      "complete_asset_count": 29,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "las_piedras_development",
+      "aoi_role": "dataset_development",
+      "year": 2018,
+      "item_count": 12,
+      "complete_asset_count": 12,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "las_piedras_development",
+      "aoi_role": "dataset_development",
+      "year": 2022,
+      "item_count": 15,
+      "complete_asset_count": 15,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "inambari_development",
+      "aoi_role": "dataset_development",
+      "year": 2018,
+      "item_count": 7,
+      "complete_asset_count": 7,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "inambari_development",
+      "aoi_role": "dataset_development",
+      "year": 2022,
+      "item_count": 14,
+      "complete_asset_count": 14,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "tambopata_test_area",
+      "aoi_role": "diagnostic_holdout",
+      "year": 2018,
+      "item_count": 23,
+      "complete_asset_count": 23,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "tambopata_test_area",
+      "aoi_role": "diagnostic_holdout",
+      "year": 2022,
+      "item_count": 36,
+      "complete_asset_count": 36,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "iberia_final_holdout",
+      "aoi_role": "final_geographic_holdout",
+      "year": 2018,
+      "item_count": 25,
+      "complete_asset_count": 25,
+      "status": "passed"
+    },
+    {
+      "aoi_id": "iberia_final_holdout",
+      "aoi_role": "final_geographic_holdout",
+      "year": 2022,
+      "item_count": 39,
+      "complete_asset_count": 39,
+      "status": "passed"
+    }
+  ]
+}

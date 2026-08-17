@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "laberinto_development",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "laberinto_development"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.68,
+              -12.62
+            ],
+            [
+              -69.54,
+              -12.62
+            ],
+            [
+              -69.54,
+              -12.5
+            ],
+            [
+              -69.68,
+              -12.5
+            ],
+            [
+              -69.68,
+              -12.62
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+aoi_id,display_name,aoi_role,min_lon,min_lat,max_lon,max_lat
+iberia_final_holdout,Iberia Final Geographic Holdout,final_geographic_holdout,-69.65,-11.5,-69.51,-11.38
+inambari_development,Inambari Development Area,dataset_development,-70.18,-13.3,-70.04,-13.18
+la_pampa,La Pampa Project Study Area,dataset_development,-70.01,-13.05,-69.89,-12.95
+laberinto_development,Laberinto Development Area,dataset_development,-69.68,-12.62,-69.54,-12.5
+las_piedras_development,Las Piedras Development Area,dataset_development,-69.31,-12.08,-69.17,-11.96
+mining_training_area,Mining Landscape Training Area,dataset_development,-70.45,-12.95,-70.3,-12.83
+tambopata_test_area,Tambopata Diagnostic Test Area,diagnostic_holdout,-69.86,-13.08,-69.74,-12.98

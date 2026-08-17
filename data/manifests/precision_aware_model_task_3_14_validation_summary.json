@@ -1,0 +1,88 @@
+{
+  "task": "3.14-precision-mitigation",
+  "status": "PASSED",
+  "quality_gate_status": "FAILED",
+  "checks": [
+    {
+      "name": "required_artifacts_exist",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "model_bundle_schema",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "threshold_range",
+      "passed": true,
+      "detail": "threshold=0.536"
+    },
+    {
+      "name": "holdout_protocol",
+      "passed": true,
+      "detail": "training and threshold selection must exclude test and final_holdout"
+    },
+    {
+      "name": "precision_threshold_policy",
+      "passed": true,
+      "detail": "report must identify the validation precision policy"
+    },
+    {
+      "name": "no_target_leakage",
+      "passed": true,
+      "detail": "leaked_features=[]"
+    },
+    {
+      "name": "feature_schema_matches_config",
+      "passed": true,
+      "detail": "artifact channel order must match configuration"
+    },
+    {
+      "name": "importance_schema",
+      "passed": true,
+      "detail": "feature importance file must contain each configured feature once in descending importance order"
+    },
+    {
+      "name": "importance_sum",
+      "passed": true,
+      "detail": "sum=0.9999999999999971"
+    },
+    {
+      "name": "prediction_schema",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "one_prediction_per_manifest_row",
+      "passed": true,
+      "detail": "predictions=123535, manifest=123535"
+    },
+    {
+      "name": "probability_range",
+      "passed": true,
+      "detail": "probabilities must be in [0,1]"
+    },
+    {
+      "name": "threshold_applied",
+      "passed": true,
+      "detail": "predictions must use the saved threshold"
+    },
+    {
+      "name": "split_schema",
+      "passed": true,
+      "detail": "splits=['final_holdout', 'test', 'train', 'validation']"
+    },
+    {
+      "name": "reported_metrics_reproduce",
+      "passed": true,
+      "detail": "maximum_absolute_difference=1.11e-16"
+    },
+    {
+      "name": "quality_gate_reporting",
+      "passed": true,
+      "detail": "reported_status=FAILED"
+    }
+  ],
+  "errors": []
+}

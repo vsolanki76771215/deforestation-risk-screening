@@ -1,0 +1,30 @@
+{
+  "run_id": "huepetuhe_2018_2022-demo-sample",
+  "created_at_utc": "2026-08-14T04:39:04.209953+00:00",
+  "status": "COMPLETED",
+  "task_scope": "deforestation-risk probability; not confirmed illegal-mining detection",
+  "input_manifest": "C:\\Vipul\\UMassGlobal\\Capstone Project\\deforestation-capstone\\data\\manifests\\inference_patches_huepetuhe.csv",
+  "input_manifest_sha256": "9a131845f5f1330f66a7768cec48d84b229d0b7b4edbd5e3e3fe678d74a8599d",
+  "reference_raster": "C:\\Vipul\\UMassGlobal\\Capstone Project\\deforestation-capstone\\data\\processed\\inference_features_huepetuhe\\huepetuhe_inference_area\\model_features.tif",
+  "model_artifact": "C:\\Vipul\\UMassGlobal\\Capstone Project\\deforestation-capstone\\models\\task_3_14\\precision_aware_extra_trees.joblib",
+  "model_artifact_sha256": "40e198846735997bbbbfaa76fd7fb790499d9fa732579343180c6d85514c33f4",
+  "threshold": 0.536,
+  "expected_patch_shape": [
+    11,
+    32,
+    32
+  ],
+  "accepted_patch_count": 250,
+  "rejected_patch_count": 0,
+  "alert_count": 125,
+  "outputs": {
+    "predictions": "predictions.csv",
+    "rejected": "rejected_patches.csv",
+    "aoi_summary": "aoi_summary.csv",
+    "map": "prediction_map.geojson"
+  },
+  "demo_sample": true,
+  "source_run_id": "huepetuhe_2018_2022",
+  "source_accepted_patch_count": 30143,
+  "sampling_note": "Deterministic representative subset for the repository dashboard demo; not the full inference result."
+}

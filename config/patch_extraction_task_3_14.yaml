@@ -1,0 +1,21 @@
+patches:
+  patch_size: 32
+  stride: 8
+  random_seed: 42
+  min_valid_fraction: 1.0
+  max_patches_per_aoi: null
+  output_root: data/processed/patches_task_3_14
+  manifest: data/manifests/patches_task_3_14.csv
+  summary: data/manifests/patch_extraction_summary_task_3_14.json
+
+inputs:
+  feature_manifest: data/manifests/model_features_task_3_14.csv
+  label_manifest: data/manifests/label_rasters_task_3_14.csv
+
+validation:
+  expected_bands: 11
+  expected_patch_size: 32
+  expected_crs: EPSG:32719
+  expected_resolution_m: 10.0
+  held_out_aoi: tambopata_test_area
+  held_out_role: geographic_holdout

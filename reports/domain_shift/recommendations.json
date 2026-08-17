@@ -1,0 +1,28 @@
+{
+  "priority": [
+    {
+      "rank": 1,
+      "action": "Review top importance-weighted shifted channels and composite normalization",
+      "uses_test_for_training": false
+    },
+    {
+      "rank": 2,
+      "action": "Inspect high-error spatial cells for label, cloud, boundary, and mining-context artifacts",
+      "uses_test_for_training": false
+    },
+    {
+      "rank": 3,
+      "action": "Add geographically diverse development AOIs, then rebuild spatial train/validation splits",
+      "uses_test_for_training": false
+    },
+    {
+      "rank": 4,
+      "action": "Evaluate spatial/contextual models and class-prior calibration on new validation AOIs",
+      "uses_test_for_training": false
+    }
+  ],
+  "prohibited": [
+    "Do not tune thresholds or hyperparameters on Tambopata",
+    "Do not move Tambopata patches into training"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "task": "3.8",
+  "status": "COMPLETED",
+  "patch_size": 32,
+  "stride": 8,
+  "random_seed": 42,
+  "min_valid_fraction": 1.0,
+  "max_patches_per_aoi": null,
+  "total_patches": 130651,
+  "aois": [
+    {
+      "aoi_id": "iberia_final_holdout",
+      "aoi_role": "final_geographic_holdout",
+      "eligible_candidates": 14793,
+      "patches_written": 14793,
+      "selection_seed": 8234231186914434453
+    },
+    {
+      "aoi_id": "inambari_development",
+      "aoi_role": "dataset_development",
+      "eligible_candidates": 26427,
+      "patches_written": 26427,
+      "selection_seed": 8702590183708516573
+    },
+    {
+      "aoi_id": "la_pampa",
+      "aoi_role": "dataset_development",
+      "eligible_candidates": 7335,
+      "patches_written": 7335,
+      "selection_seed": 11777860368933412830
+    },
+    {
+      "aoi_id": "laberinto_development",
+      "aoi_role": "dataset_development",
+      "eligible_candidates": 28184,
+      "patches_written": 28184,
+      "selection_seed": 14760402134625212772
+    },
+    {
+      "aoi_id": "las_piedras_development",
+      "aoi_role": "dataset_development",
+      "eligible_candidates": 22804,
+      "patches_written": 22804,
+      "selection_seed": 7891526049169291414
+    },
+    {
+      "aoi_id": "mining_training_area",
+      "aoi_role": "dataset_development",
+      "eligible_candidates": 15234,
+      "patches_written": 15234,
+      "selection_seed": 4431839471364006014
+    },
+    {
+      "aoi_id": "tambopata_test_area",
+      "aoi_role": "geographic_holdout",
+      "eligible_candidates": 15874,
+      "patches_written": 15874,
+      "selection_seed": 13817847228286628074
+    }
+  ],
+  "manifest_sha256": "c027938d6124b7bbb660fb80675273375165ddefa6e1e28e671821de5f6ac08f"
+}

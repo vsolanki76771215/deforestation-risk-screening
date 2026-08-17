@@ -1,0 +1,46 @@
+task: "3.14-precision-mitigation"
+random_seed: 42
+
+inputs:
+  modeling_manifest: data/manifests/modeling_dataset_v2.csv
+
+columns:
+  patch_id: patch_id
+  aoi_id: aoi_id
+  feature_patch_path: feature_patch_path
+  target: loss_binary
+  split: split
+
+features:
+  archive_key: features
+  channel_names: [ndvi_diff, ndvi_2018, ndvi_2022, b02_2018, b03_2018, b04_2018, b08_2018, b02_2022, b03_2022, b04_2022, b08_2022]
+  expected_patch_size: 32
+  statistics: [mean, std, min, max, median]
+  forbidden_predictor_columns: [loss_fraction, positive_pixels, negative_pixels, loss_binary]
+
+model:
+  type: ExtraTreesClassifier
+  n_estimators: 600
+  max_depth: null
+  min_samples_leaf: 4
+  max_features: sqrt
+  class_weight: balanced
+  n_jobs: -1
+
+threshold_selection:
+  # Choose the best validation F1 among thresholds with at least 50% precision.
+  minimum_precision: 0.50
+  grid_points: 1001
+  fallback_objective: f1
+
+quality_gates:
+  test_roc_auc_min: 0.90
+  test_pr_auc_min: 0.65
+  test_recall_min: 0.75
+
+outputs:
+  model_artifact: models/task_3_14/precision_aware_extra_trees.joblib
+  metrics: reports/task_3_14/precision_mitigation/precision_aware_metrics.json
+  predictions: reports/task_3_14/precision_mitigation/precision_aware_predictions.csv
+  feature_importance: reports/task_3_14/precision_mitigation/feature_importance.csv
+  validation_summary: data/manifests/precision_aware_model_task_3_14_validation_summary.json

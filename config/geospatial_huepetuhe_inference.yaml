@@ -1,0 +1,107 @@
+specification:
+  source_document: Step_2_Geospatial_Data_Specification.md
+  source_version: task-3.14-1.0
+  geometry_crs: EPSG:4326
+  analysis_crs: EPSG:32719
+  coordinate_order: [longitude, latitude]
+
+features:
+  baseline_year: 2018
+  comparison_year: 2022
+  source_bands: {blue: B02, green: B03, red: B04, nir: B08}
+  output_bands: [blue_2018, green_2018, red_2018, nir_2018, blue_2022, green_2022, red_2022, nir_2022, ndvi_2018, ndvi_2022, ndvi_change]
+  reflectance_scale: 10000.0
+  ndvi_epsilon: 0.000001
+  output_dtype: float32
+  output_nodata: -9999.0
+  require_label_alignment: true
+  minimum_valid_coverage_pct: 80.0
+
+sentinel2:
+  catalog_url: https://planetarycomputer.microsoft.com/api/stac/v1
+  collection: sentinel-2-l2a
+  cloud_cover_max_pct: 20
+  baseline: {year: 2018, start_date: "2018-06-01", end_date: "2018-09-30"}
+  comparison: {year: 2022, start_date: "2022-06-01", end_date: "2022-09-30"}
+  required_assets: [B02, B03, B04, B08, SCL]
+  excluded_scl_classes: [0, 1, 3, 8, 9, 10, 11]
+  minimum_valid_coverage_pct: 80
+  ranking: {target_grid_resolution_m: 20, minimum_scenes_per_composite: 1, maximum_scenes_per_composite: 5, coverage_weight: 0.85, catalog_cloud_weight: 0.15}
+  compositing: {target_grid_resolution_m: 10, reflectance_scale_factor: 0.0001, output_nodata: -9999.0, method: median}
+
+hansen:
+  version: GFC-2025-v1.13
+  base_url: https://storage.googleapis.com/earthenginepartners-hansen/GFC-2025-v1.13
+  tiles: [10S_070W, 10S_080W]
+  required_bands: [lossyear, treecover2000, datamask]
+  forest_threshold_treecover2000_pct: 30
+  prior_loss_exclusion_years: [2001, 2018]
+  positive_loss_years: [2019, 2022]
+  minimum_valid_coverage_pct: 95
+  preserve_native_grid: true
+  output_dtype: uint8
+  output_nodata: 255
+  compression: DEFLATE
+
+nodata: {require_valid_baseline_and_comparison: true, convert_nodata_to_negative_class: false}
+labels:
+  task: "3.14"
+  reference_grid: sentinel2_baseline_composite
+  baseline_year: 2018
+  comparison_year: 2022
+  forest_threshold_treecover2000_pct: 30
+  exclude_loss_year_start: 2001
+  exclude_loss_year_end: 2018
+  positive_loss_year_start: 2019
+  positive_loss_year_end: 2022
+  require_valid_baseline: true
+  require_valid_comparison: true
+  require_valid_hansen: true
+  negative_class_value: 0
+  positive_class_value: 1
+  output_dtype: uint8
+  output_nodata: 255
+  compression: DEFLATE
+  resampling: nearest
+  output_filename: loss_binary.tif
+  preserve_excluded_as_nodata: true
+
+patches:
+  patch_size: 32
+  stride: 8
+  min_valid_fraction: 0.80
+  max_patches_per_aoi: null
+  random_seed: 42
+  output_root: data/processed/patches_huepetuhe_inference
+  manifest: data/manifests/patches_huepetuhe_inference.csv
+
+# New rectangles are proposed study windows. Inspect them on a basemap before the
+# first acquisition run; after data are generated, changing them invalidates all
+# downstream Task 3.14 artifacts.
+aois:
+  huepetuhe_inference_area:
+    display_name: Huepetuhe Inference Area, Madre de Dios, Peru
+    role: inference_only
+    bounds_epsg4326: [-70.7500, -13.0000, -70.6100, -12.8800]
+
+outputs:
+  raw_root: data/raw
+  manifest_root: data/manifests
+  sentinel2_manifest: data/manifests/sentinel2_items_huepetuhe_inference.csv
+  hansen_manifest: data/manifests/hansen_assets_huepetuhe_inference.csv
+  run_manifest: data/manifests/acquisition_run_huepetuhe_inference.json
+  sentinel2_ranked_manifest: data/manifests/sentinel2_ranked_scenes_huepetuhe_inference.csv
+  sentinel2_composite_inputs: data/manifests/sentinel2_composite_inputs_huepetuhe_inference.csv
+  sentinel2_coverage_summary: data/manifests/sentinel2_coverage_summary_huepetuhe_inference.json
+  sentinel2_acquisition_manifest: data/manifests/sentinel2_acquired_assets_huepetuhe_inference.csv
+  sentinel2_composite_manifest: data/manifests/sentinel2_composites_huepetuhe_inference.csv
+  sentinel2_composite_summary: data/manifests/sentinel2_composite_summary_huepetuhe_inference.json
+  sentinel2_raw_root: data/raw/sentinel2
+  sentinel2_composite_root: data/processed/sentinel2_composites
+  hansen_raw_root: data/raw/hansen
+  hansen_clipped_root: data/processed/hansen
+  hansen_clipped_manifest: data/manifests/hansen_clipped_huepetuhe_inference.csv
+  hansen_validation_summary: data/manifests/hansen_validation_summary_huepetuhe_inference.json
+  label_root: data/processed/labels_huepetuhe_inference
+  label_manifest: data/manifests/label_rasters_huepetuhe_inference.csv
+  label_validation_summary: data/manifests/label_validation_summary_huepetuhe_inference.json

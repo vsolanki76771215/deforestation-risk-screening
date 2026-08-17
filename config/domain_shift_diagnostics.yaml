@@ -1,0 +1,42 @@
+task: "3.12"
+
+inputs:
+  modeling_manifest: data/manifests/modeling_dataset.csv
+  improved_model: models/improved_tree_ensemble.joblib
+  improved_metrics: reports/improved/improved_model_metrics.json
+  improved_predictions: reports/improved/improved_model_predictions.csv
+  feature_importance: reports/improved/feature_importance.csv
+
+columns:
+  patch_id: patch_id
+  aoi_id: aoi_id
+  split: split
+  target: loss_binary
+  feature_patch_path: feature_patch_path
+  row_off: row_off
+  col_off: col_off
+  patch_size: patch_size
+
+diagnostics:
+  reference_split: train
+  comparison_splits: [validation, test]
+  histogram_bins: 10
+  epsilon: 1.0e-6
+  top_features: 20
+  spatial_grid_size_pixels: 512
+  severe_smd: 0.8
+  severe_psi: 0.25
+  severe_jsd: 0.10
+  forbidden_predictor_columns: [loss_fraction, positive_pixels, negative_pixels, loss_binary]
+
+outputs:
+  summary: reports/domain_shift/domain_shift_summary.json
+  split_profile: reports/domain_shift/split_profile.csv
+  aoi_profile: reports/domain_shift/aoi_profile.csv
+  feature_shift: reports/domain_shift/feature_shift.csv
+  error_analysis: reports/domain_shift/error_analysis.csv
+  spatial_error_grid: reports/domain_shift/spatial_error_grid.csv
+  recommendations: reports/domain_shift/recommendations.json
+  feature_shift_plot: reports/domain_shift/feature_shift_top20.png
+  error_plot: reports/domain_shift/test_error_counts.png
+  validation_summary: data/manifests/domain_shift_validation_summary.json

@@ -1,0 +1,95 @@
+{
+  "task": "3.9",
+  "status": "PASSED",
+  "manifest": "data/manifests/modeling_dataset_v2.csv",
+  "row_count": 123535,
+  "counts_by_split": {
+    "final_holdout": 14793,
+    "test": 15874,
+    "train": 75416,
+    "validation": 17452
+  },
+  "checks": [
+    {
+      "name": "required_columns",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "non_empty",
+      "passed": true,
+      "detail": "rows=123535"
+    },
+    {
+      "name": "unique_patch_id",
+      "passed": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "name": "no_null_required_values",
+      "passed": true,
+      "detail": "required columns contain no nulls"
+    },
+    {
+      "name": "allowed_splits",
+      "passed": true,
+      "detail": "actual=['final_holdout', 'test', 'train', 'validation']"
+    },
+    {
+      "name": "all_splits_present",
+      "passed": true,
+      "detail": "actual=['final_holdout', 'test', 'train', 'validation']"
+    },
+    {
+      "name": "held_out_rows_are_test",
+      "passed": true,
+      "detail": "diagnostic geographic-holdout rows must be test"
+    },
+    {
+      "name": "final_holdout_rows_are_final_holdout",
+      "passed": true,
+      "detail": "final geographic-holdout rows must be final_holdout"
+    },
+    {
+      "name": "development_rows_are_train_or_validation",
+      "passed": true,
+      "detail": "development AOIs must be assigned only to train or validation"
+    },
+    {
+      "name": "test_and_final_holdout_are_disjoint",
+      "passed": true,
+      "detail": "no row may belong to both test and final_holdout"
+    },
+    {
+      "name": "spatial_blocks_do_not_cross_splits",
+      "passed": true,
+      "detail": "violating_blocks=0"
+    },
+    {
+      "name": "development_patches_inside_blocks",
+      "passed": true,
+      "detail": "all train/validation patches must fit fully within their assigned block"
+    },
+    {
+      "name": "binary_label_rule",
+      "passed": true,
+      "detail": "derived label must match configured loss-fraction rule"
+    },
+    {
+      "name": "both_classes_in_each_split",
+      "passed": true,
+      "detail": "splits_with_fewer_than_2_classes={}"
+    },
+    {
+      "name": "patch_files_exist",
+      "passed": true,
+      "detail": "feature/label files missing=0 examples=[]"
+    },
+    {
+      "name": "npz_files_readable",
+      "passed": true,
+      "detail": "unreadable=0 examples=[]"
+    }
+  ],
+  "errors": []
+}
