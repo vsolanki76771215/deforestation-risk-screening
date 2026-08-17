@@ -13,6 +13,24 @@ An end-to-end geospatial machine-learning pipeline that uses Sentinel-2 imagery 
 - Batch inference packaged for Amazon SageMaker Batch Transform.
 - Streamlit dashboard for filtering, mapping, inspecting, and downloading predictions.
 
+## Live Demo
+
+[Open the Deforestation Risk Monitor](https://deforestation-risk-screening-kygubnz2e5kjxvquneivvu.streamlit.app/)
+
+The dashboard presents Sentinel-2 patch-level deforestation and vegetation-loss risk predictions for the Huepetuhe, Madre de Dios inference area.
+
+### Dashboard Summary
+
+![Streamlit dashboard summary](docs/screenshots/streamlit-dashboard-summary.png)
+
+### Prediction
+
+![Streamlit prediction map](docs/screenshots/streamlit-prediction-map.png)
+
+### Risk Map
+
+![Streamlit prediction map](docs/screenshots/streamlit-prediction-riskmap.png)
+
 ## Architecture
 
 ```mermaid
