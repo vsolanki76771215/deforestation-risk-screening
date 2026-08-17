@@ -96,12 +96,20 @@ tests/                        Automated unit tests
 streamlit_app.py              Interactive prediction-map dashboard
 ```
 
+## Documentation
+
+- [System architecture](docs/ARCHITECTURE.md)
+- [Model card](docs/MODEL_CARD.md)
+- [Data sheet](docs/DATA_SHEET.md)
+- [Operations runbook](docs/RUNBOOK.md)
+- [Step 11/12 rubric evidence](docs/RUBRIC_EVIDENCE.md)
+
 ## Local setup
 
 Prerequisites: Python 3.10+ and PowerShell on Windows (or an equivalent shell).
 
 ```powershell
-git clone <YOUR-REPOSITORY-URL>
+git clone https://github.com/vsolanki76771215/deforestation-risk-screening.git deforestation-capstone
 Set-Location deforestation-capstone
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
