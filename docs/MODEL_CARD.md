@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Model | `ExtraTreesClassifier` |
-| Final artifact | `models/task_3_14/precision_aware_extra_trees.joblib` |
+| Final artifact | `[precision_aware_extra_trees.joblib](https://github.com/vsolanki76771215/deforestation-risk-screening/releases/download/v1.0.0/precision_aware_extra_trees.joblib)` |
 | Decision threshold | 0.536 |
 | Input | 11 x 32 x 32 Sentinel-2-derived feature patch |
 | Patch summary statistics | Mean, standard deviation, minimum, maximum, median per channel |
